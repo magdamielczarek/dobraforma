@@ -1,6 +1,6 @@
 
 body {
-	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -23,7 +23,7 @@ h1 {
 }
 
 .container {
-	height: 100%;
+	min-height: 100%;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -202,7 +202,7 @@ main {
 footer {
 	height: 40px;
 	position: absolute;
-	padding: 10px 0;
+	padding: 80px 0 10px;
 	font-size: 20px;
 }
 
