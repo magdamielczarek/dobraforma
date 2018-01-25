@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Oswald:400,700&subset=latin-ext');
+
+$primary_font: 'Open Sans', sans-serif;
+$secondary_font: 'Oswald', sans-serif;
+$b-radius: 5px;
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: $primary_font;
+	background: url('../images/bg.jpg') no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	padding: 0 20px;
+	font: {
+		family: $secondary_font;
+		size: 60px;
+	}
+	color: rgba(0,0,0,0.7);
+	text-align: center;
+	background-color: #FBCD00;
+	border-radius: $b-radius;
+}
+
+.container {
+	height: 100%;
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*********************************************
+			PANELS
+*********************************************/
+
+main {
+	height: 100%;
+	margin: 20px 0;
+}
+
+	.panels {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: space-between;
+	}
+
+		.panel {
+			height: 100%;
+			padding-bottom: 20px;
+			flex-basis: 30%;
+			color: #FFF;
+			text-align: center;
+			background-color: rgba(0,0,0,0.5);
+			border-radius: $b-radius;
+			p, span {
+				font-size: 18px;
+			}
+			span {
+				margin: 0 5px;
+			}
+		}
+
+		.panel:first-of-type,
+		.panel:last-of-type {
+			p {
+				margin: 5px auto;
+			}
+			transition: 1s all;
+		} 
+
+			h2 {
+				width: 60%;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				padding: 10px 20px;
+				background-color: #F19F4E;
+				border-radius: 0 $b-radius $b-radius 0;
+			}
+
+			fieldset {
+				margin: 20px;
+				padding: 20px;
+				border: 1px solid rgba(255,255,255,0.8);
+			}
+
+			.circle,
+			.square,
+			.rect { 
+				display: none;
+				opacity: 100%;
+				transition: 1s all;
+			}
+
+				label {
+					margin-right: 20px;
+				}
+
+				.shape {
+					label {
+						margin: 0 10px;
+					}
+				}
+
+					.flaticon-food-6,
+					.flaticon-berry,
+					.flaticon-food-2 {
+						&:before {
+						margin-left: 0;
+						font-size: 60px;
+						cursor: pointer;
+						transition: 0.5s all;
+						}
+						&:hover {
+							color: #FBCD00;
+						}
+					}
+
+				input[type="radio"] {
+					display: none;
+				}
+
+				input[type="text"] {
+					width: 40px;
+					padding: 5px;
+					background-color: #FFF;
+					border: none;
+					border-radius: 5px;
+				}
+
+				.rect input {
+					width: 20%;
+				}
+
+				.summary {
+					color: #FBCD00;
+				}
+
+/*********************************************
+			FEEDBACK PANEL
+*********************************************/
+
+.feedback {
+	height: auto;  //zmienic height na 0 domyslnie
+	margin: 0 20px;
+	padding: 0 20px 20px;
+	h2 {
+		background-color: #4483CE;
+	}
+}
+
+	.compare-btn {
+		margin: 30px auto;
+		border-radius: $b-radius;
+		color: #FFF;
+		text-align: center;
+		text-transform: uppercase;
+		background-color: #4483CE; 
+		cursor: pointer;
+		transition: all 0.5s;
+		&:hover {
+			box-shadow: 0 0 3px 4px rgba(255,255,255,0.8);
+			transform: scale(1.2);
+		}
+	}
+
+	.instructions {
+		//margin-top: 100px;
+	}
+
+	.result {
+		font-size: 70px;
+	}
+
+	.figures {
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		position: relative;
+		display: none;
+	}
+
+	.figure-recipe,
+	.figure-resources {
+		width:100%; 
+		height: 200px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+
+	.figure {
+		margin: 0 auto;
+		position: absolute;
+		border: 2px solid #FFF;
+	}
+/*********************************************
+			FOOTER
+*********************************************/
+
+footer {
+	position: absolute;
+	bottom: 0;
+	padding: 10px 0;
+	font-size: 20px;
+}
+
+	footer ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		list-style-type: none;
+		a {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+			&:hover {
+				color: #FBCD00;
+			}
+		}
+		.flaticon-github-logo:before,
+		.flaticon-linkedin-logo-button:before {
+			font-size: 35px;
+		}
+}
+
+
+/*********************************************
+			INTERACTION
+*********************************************/
+
+.red-font {
+	color: #FF491B;
+}
+
+.green-font {
+	color: #D8DC37;
+}
+
+.difference-col {
+	background-color: #FF491B;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.active-choice {
+	color: #FBCD00;
+}

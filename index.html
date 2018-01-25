@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dobra forma</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="src/fonts/font/flaticon.css"> 
+        <link rel="stylesheet" href="src/css/style.css" />
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <div class='container'>
+            <h1>dobra forma</h1>
+            <main>
+                <div class="panels">
+                    <section class="panel form recipe">
+                        <h2>W przepisie:</h2>
+                        <form>
+                            <fieldset class="shape">
+                                <legend>Kształt</legend>
+                                <label><span class=" shape-icon flaticon-food-6"></span></label>
+                                <input type="radio" name="shape" value="circle" />
+                                <label><span class=" shape-icon flaticon-berry"></span></label>
+                                <input type="radio" name="shape" value="square" />
+                                <label><span class=" shape-icon flaticon-food-2"></span></label>
+                                <input type="radio" name="shape" value="rect" />
+                            </fieldset>
+                            <fieldset class="size circle">
+                                <legend>Wymiary</legend>
+                                <label>Średnica:</label>
+                                <input type="text" placeholder="cm"  /> 
+                            </fieldset>
+                            <fieldset class="size square">
+                                <legend>Wymiary</legend>
+                                <label>Bok:</label>
+                                <input type="text" placeholder="cm" /> 
+                            </fieldset>
+                            <fieldset class="size rect">
+                                <legend>Wymiary</legend>
+                                <label>Boki:</label>
+                                <input type="text" placeholder="cm"  id="side-a-recipe"/>
+                                <span>x</span>
+                                <input type="text" placeholder="cm"  id="side-b-recipe"/>  
+                            </fieldset>
+                            <article class="summary">
+                                <p class="shape-chosen"></p>
+                                <p class="size-chosen">
+                                    <span class="show-side-a"></span><span class="show-side-b"></span>
+                                </p>    
+                            </article>
+                        </form>
+                    </section>
+                    <section class="panel feedback">
+                        <h2 class="compare-btn">Porównaj</h2>
+                        <p class="instructions">Wybierz parametry obu form i kliknij "PORÓWNAJ".</p>
+                        <div class="compare-info">
+                            <div class="result"></div>
+                            <p></p>
+                            <div class="figures">
+                                <div class="figure-recipe"></div>
+                                <div class="figure-resources"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="panel form resources">
+                        <h2>Twoja forma:</h2>
+                        <form>
+                            <fieldset class="shape">
+                                <legend>Kształt</legend>
+                                <label><span class=" shape-icon flaticon-food-6"></span></label>
+                                <input type="radio" name="shape" value="circle" />
+                                <label><span class=" shape-icon flaticon-berry"></span></label>
+                                <input type="radio" name="shape" value="square" />
+                                <label><span class=" shape-icon flaticon-food-2"></span></label>
+                                <input type="radio" name="shape" value="rect" />
+                            </fieldset>
+                            <fieldset class="size circle">
+                                <legend>Wymiary</legend>
+                                <label>Średnica:</label>
+                                <input type="text" placeholder="cm"  />
+                            </fieldset>
+                            <fieldset class="size square">
+                                <legend>Wymiary</legend>
+                                <label>Bok:</label>
+                                <input type="text" placeholder="cm" /> 
+                            </fieldset>
+                            <fieldset class="size rect">
+                                <legend>Wymiary</legend>
+                                <label>Boki:</label>
+                                <input type="text" placeholder="cm"  id="side-a-resources"/>
+                                <span>x</span>
+                                <input type="text" placeholder="cm"  id="side-b-resources"/>  
+                            </fieldset>
+                            <article class="summary">
+                                <p class="shape-chosen"></p>
+                                <p class="size-chosen">
+                                    <span class="show-side-a"></span><span class="show-side-b"></span>
+                                </p>    
+                            </article>
+                        </form>
+                    </section>
+                </div>
+            </main>
+            <footer> 
+                <ul>
+                    <li>&copy; Magda Mielczarek</li>
+                    <li><a class="flaticon-github-sign" href="https://github.com/magdamielczarek" alt="go to author's github profile" target="_blank"></a></li>
+                    <li><a class="flaticon-linkedin-logo" href="https://www.linkedin.com/in/magda-mielczarek-20b06275/" alt="go to author's linkedin profile" target="_blank"></a></li>
+                </ul>
+            </footer>
+        </div>
+        
+
+        
+        
+        <script src="src/js/script.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>
