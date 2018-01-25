@@ -1,0 +1,64 @@
+
+@media screen and (max-width:1100px){
+
+	.panel:first-of-type h2,
+	.panel:last-of-type h2 {
+		font-size: 25px;
+		width: auto;
+		border-radius: 0 0 0 0;
+	}
+
+	/*.size-description {
+		display:block;
+		margin-bottom: 20px;
+		text-align: left;
+	}*/
+
+		.panels {
+		flex-flow: row wrap;
+	}
+
+	.panel {
+		flex-basis: 100%;
+		margin: 10px auto;
+	}
+
+	fieldset {
+		padding: 10px;
+	}
+
+	.flaticon-food-6:before, 
+	.flaticon-berry:before, 
+	.flaticon-food-2:before {
+		font-size: 40px;
+	}
+
+	.recipe {
+		order: 1;
+	}
+
+	.feedback {
+		order: 3;
+	}
+
+	.resources {
+		order: 2;
+	}
+}
+
+@media screen and (max-width:800px){
+	.compare-btn {
+		width: auto;
+	}
+}
+
+@media screen and (max-width:600px){
+
+	.container  {
+		width: 90%;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+}
