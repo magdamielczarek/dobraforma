@@ -92,7 +92,6 @@ compare_areas = () => {
 
 	let resources_area,
 		recipe_area,
-		difference,
 		resources_final_a,
 		resources_final_b,
 		recipe_final_a,
@@ -170,31 +169,18 @@ compare_areas = () => {
 		draw_figure('0','resources');
 	}
 
-	if(recipe_area>resources_area){
-		difference = Math.round((100 - (resources_area/recipe_area)*100));
-		document.querySelector('.figure-recipe .figure').style.zIndex = '0';
-		document.querySelector('.figure-resources .figure').style.zIndex = '1';
-		if(difference <= 20){
-			result_sign.innerText = '>';
-			result_info.innerText = `Twoja forma jest mniejsza od formy z przepisu o ${difference}%. To mała różnica. Ciasto prawie na pewno się uda.`;
-			result_sign.classList.remove('red-font');
-			result_sign.classList.add('green-font');
-			document.querySelector('.figure-recipe .figure').style.backgroundColor = '#D8DC37';
-		} else if(difference > 20 && difference <= 30){
-			result_sign.innerText = '>';
-			result_info.innerText = `Twoja forma jest mniejsza od formy z przepisu o ${difference}%. Ciasto się uda, choć będzie wyższe.`;
-			result_sign.classList.remove('red-font');
-			result_sign.classList.add('green-font');
-			document.querySelector('.figure-recipe .figure').style.backgroundColor = '#D8DC37';
-		} else if (difference > 30) {
-			result_sign.innerText = '>';
-			result_info.innerText = `Twoja forma jest mniejsza od formy z przepisu o ${difference}%. Ciasto wyleje się z formy przy pieczeniu`;
-			result_sign.classList.remove('green-font');
-			result_sign.classList.add('red-font');
-			document.querySelector('.figure-recipe .figure').style.backgroundColor = '#FF491B';
-		}
-	} else if (recipe_area<resources_area) {
-		difference = (100 - (recipe_area/resources_area)*100);
+	let proportion = resources_area/recipe_area;
+	let difference_number = proportion - 1;
+	let difference = Math.round((Math.abs(difference_number)) * 100);
+	
+	if(difference_number === 0){
+		result_sign.classList.remove('red-font');
+		result_sign.classList.add('green-font');
+		result_sign.innerText = '=';
+		result_info.innerText = 'Twoja forma jest tej samej wielkości, co forma z przepisu. Udanych wypieków!';
+		document.querySelector('.figure-recipe .figure').style.backgroundColor = '#D8DC37';
+		document.querySelector('.figure-resources .figure').style.backgroundColor = '#D8DC37';
+	} else if (difference_number>0) {
 		document.querySelector('.figure-resources .figure').style.zIndex = '0';
 		document.querySelector('.figure-recipe .figure').style.zIndex = '1';
 		if(difference <= 20){
@@ -216,15 +202,29 @@ compare_areas = () => {
 			result_sign.classList.add('red-font');
 			document.querySelector('.figure-resources .figure').style.backgroundColor = '#FF491B';
 		}
-	} else {
-		result_sign.classList.remove('red-font');
-		result_sign.classList.add('green-font');
-		result_sign.innerText = '=';
-		result_info.innerText = 'Twoja forma jest tej samej wielkości, co forma z przepisu. Udanych wypieków!';
-		document.querySelector('.figure-recipe .figure').style.backgroundColor = '#D8DC37';
-		document.querySelector('.figure-resources .figure').style.backgroundColor = '#D8DC37';
-	}
-	
+	} else if (difference_number<0) {
+		document.querySelector('.figure-recipe .figure').style.zIndex = '0';
+		document.querySelector('.figure-resources .figure').style.zIndex = '1';
+		if(difference <= 20){
+			result_sign.innerText = '>';
+			result_info.innerText = `Twoja forma jest mniejsza od formy z przepisu o ${difference}%. To mała różnica. Ciasto prawie na pewno się uda.`;
+			result_sign.classList.remove('red-font');
+			result_sign.classList.add('green-font');
+			document.querySelector('.figure-recipe .figure').style.backgroundColor = '#D8DC37';
+		} else if(difference > 20 && difference <= 30){
+			result_sign.innerText = '>';
+			result_info.innerText = `Twoja forma jest mniejsza od formy z przepisu o ${difference}%. Ciasto się uda, choć będzie wyższe.`;
+			result_sign.classList.remove('red-font');
+			result_sign.classList.add('green-font');
+			document.querySelector('.figure-recipe .figure').style.backgroundColor = '#D8DC37';
+		} else if (difference > 30) {
+			result_sign.innerText = '>';
+			result_info.innerText = `Twoja forma jest mniejsza od formy z przepisu o ${difference}%. Ciasto wyleje się z formy przy pieczeniu`;
+			result_sign.classList.remove('green-font');
+			result_sign.classList.add('red-font');
+			document.querySelector('.figure-recipe .figure').style.backgroundColor = '#FF491B';
+		}
+	}	
 }
 
 
