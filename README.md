@@ -1,2 +1,6 @@
-# dobraforma
-Aplikacja, która sprawdza rozbieżność między wielkością formy do pieczenia użytej przez blogera kulinarnego a wielkością formy, której planuje użyć internauta. Aplikacja rozwiązuje problem oszacowania proporcji między formami, zwłaszcza wtedy, kiedy mają inny kształt.
+Planowane zmiany:
+
+- uporządowanie skryptu
+- naprawa stopki
+- dodanie możliwości zapisania swoich form i wyszukwania przez skrypt formy najbliższej oryginałowi spośród zapisanych
+- dodanie brakujących atrybutów dla label oraz inputów
