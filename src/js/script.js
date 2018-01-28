@@ -150,7 +150,7 @@ compare_areas = () => {
 	}
 
 	switch (recipe_final_shape){
-		case 'Forma okrągła': recipe_area = Math.PI*(Math.pow(Number(recipe_final_size),2)/4);
+		case 'Forma okrągła': recipe_area = Math.round(Math.PI*(Math.pow(Number(recipe_final_size),2)/4));
 		draw_figure('50%','recipe');
 		break;
 		case 'Forma prostokątna': recipe_area = Number(recipe_final_a)*Number(recipe_final_b);
@@ -160,7 +160,7 @@ compare_areas = () => {
 		draw_figure('0','recipe');
 	}
 	switch (resources_final_shape){
-		case 'Forma okrągła': resources_area = Math.PI*(Math.pow(Number(resources_final_size),2)/4);
+		case 'Forma okrągła': resources_area = Math.round(Math.PI*(Math.pow(Number(resources_final_size),2)/4));
 		draw_figure('50%','resources');
 		break;
 		case 'Forma prostokątna': resources_area = Number(resources_final_a)*Number(resources_final_b);
